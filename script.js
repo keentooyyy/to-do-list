@@ -1,6 +1,3 @@
-todos_text = []
-todos_button = []
-
 function addTodo() {
     const getInput = document.getElementById('todo').value;
     createElements(getInput);
@@ -27,12 +24,9 @@ function createElements(input) {
     document.getElementById('todo-body').appendChild(todoItemsDiv);
 
 
-
-
 }
 
 function removeTodo(element) {
     const removeButton = element.parentElement
     removeButton.remove();
 }
-
