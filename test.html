@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element Example</title>
+</head>
+<body>
+<button id="createButton">Create Div</button>
+<button id="deleteButton">Delete Div</button>
+
+<script>
+    document.getElementById('createButton').addEventListener('click', () => {
+        const newDiv = document.createElement('div');
+        newDiv.textContent = 'Hello, World!';
+        newDiv.id = 'myDiv';
+        document.body.appendChild(newDiv);
+    });
+
+    document.getElementById('deleteButton').addEventListener('click', () => {
+        const elementToDelete = document.getElementById('myDiv');
+        if (elementToDelete) {
+            elementToDelete.remove(); // or use parentNode.removeChild(elementToDelete);
+        } else {
+            alert('Div not found!');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>To Do List</title>
+</head>
+<body class="grid bg-slate-200 mt-12">
+<div class="grid w-2/4 bg-white place-self-center rounded-md" id="todo-body">
+    <h1 class="font-semibold text-center text-4xl py-10">To-Do-List</h1>
+    <hr>
+
+    <div class="grid place-self-center w-11/12">
+        <input class="my-4 p-2 w-full place-self-center ring-1 ring-gray-400 rounded-md" id="todo" type="text">
+        <button class="rounded-md bg-green-500 px-5 py-3 capitalize text-white w-fit text-center" onclick="addTodo()">
+            Add
+        </button>
+    </div>
+
+    <div class="grid place-self-center w-11/12 grid-cols-2 content-center items-center my-5" id="todo-items">
+        <p class="text-xl">Some Todo</p>
+        <button class="rounded-md bg-red-500 px-5 py-3 capitalize text-white w-fit text-center place-self-end" id="remove-btn" onclick="removeTodo(this)">Remove
+        </button>
+    </div>
+
+</div>
+
+</body>
+<script defer src="script.js"></script>
+</html>
